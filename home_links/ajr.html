@@ -262,22 +262,20 @@
       }
     }
 
-    function handleBead(bead) {
-      if (!bead.classList.contains('used')) {
-        bead.classList.add('used');
-        bead.style.backgroundColor = '#4caf50';
-        count++;
-        countSpan.innerText = count;
-        const allUsed = [...document.querySelectorAll('.bead')].every(b => b.classList.contains('used'));
-        if (allUsed) {
-          setTimeout(() => {
-            count = 0;
-            countSpan.innerText = count;
-            createBeads();
-          }, 500);
-        }
-      }
+   function handleBead(bead) {
+  if (!bead.classList.contains('used')) {
+    bead.classList.add('used');
+    bead.style.backgroundColor = '#4caf50';
+    count++;
+    countSpan.innerText = count;
+    const allUsed = [...document.querySelectorAll('.bead')].every(b => b.classList.contains('used'));
+    if (allUsed) {
+      setTimeout(() => {
+        createBeads(); // فقط إعادة توليد الخرزات بدون تصفير العداد
+      }, 500);
     }
+  }
+}
 
     function reloadBeads() {
       count = 0;
