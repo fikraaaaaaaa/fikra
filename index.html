@@ -19,6 +19,8 @@
       height: 100%;
       background-color: #000;
       font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
     }
 
     canvas {
@@ -132,16 +134,15 @@
     }
 
     footer {
-      background-color: #111;
-      color: #fff;
-      padding: 20px 10px;
-      font-family: 'Cairo', sans-serif;
-      text-align: center;
-      z-index: 10;
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-    }
+  background-color: #111;
+  color: #fff;
+  padding: 20px 10px;
+  font-family: 'Cairo', sans-serif;
+  border-top: 1px solid #333;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; 
+}
 
     .footer-container {
       display: flex;
